@@ -45,6 +45,7 @@
       if (Math.abs((xScale / yScale) - 1) > 0.1) {
         xScale = yScale = Math.min(xScale, yScale)
       }
+      var digit
       canvas.width = w * xScale;
       canvas.height = h * yScale;
       ctx = canvas.getContext("2d");
@@ -77,6 +78,7 @@
           ctx.fillRect(0, 0, w, h)
           ctx.drawImage(document.getElementById("background"), 0, 0, w, h)
           lines = []
+          digit = undefined
         }
       });
       window.addEventListener("mouseup", function(event) {
@@ -100,10 +102,17 @@
             }
             ctx.stroke();
           }
-          whatNumber()
         }
+        ctx.drawImage(document.getElementById("background"), 0, 0, w, h)
+        if (typeof digit === "undefined") return
+        ctx.fillStyle = "#333333"
+        ctx.font = '800px Nunito';
+        ctx.textAlign = 'centre';
+        ctx.fillText(digit.toString(), 450, 1300);
       });
     }
+
+    setInterval(whatNumber, 200)
 
     function whatNumber() {
       var imageData = ctx.getImageData(Math.floor(1600 * xScale), Math.floor(150 * yScale), Math.floor(1600 * xScale), Math.floor(1600 * yScale)); //1600 by 1600, CHANGE!!
@@ -189,7 +198,6 @@
       fx = net.forward(xx).w;
       digit = fx.indexOf(Math.max(...fx))
       ctx.drawImage(document.getElementById("background"), 0, 0, w, h)
-
       ctx.fillStyle = "#333333"
       ctx.font = '800px Nunito';
       ctx.textAlign = 'centre';
