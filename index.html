@@ -67,6 +67,7 @@
       var jj = JSON.parse(jjj)
       net = new nnet.Net();
       net.fromJSON(jj)
+      setInterval(whatNumber, 200)
       window.addEventListener("mousedown", function(event) {
         mouseDown = true
         lines.push([{
@@ -112,8 +113,6 @@
       });
     }
 
-    setInterval(whatNumber, 200)
-
     function whatNumber() {
       var imageData = ctx.getImageData(Math.floor(1600 * xScale), Math.floor(150 * yScale), Math.floor(1600 * xScale), Math.floor(1600 * yScale)); //1600 by 1600, CHANGE!!
       var simple = []
@@ -153,7 +152,6 @@
         }
       }
       if (maxX == "red") {
-        console.log("Canvas is blank! Returning...");
         ctx.drawImage(document.getElementById("background"), 0, 0, w, h);
         return
       }
