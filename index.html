@@ -88,7 +88,7 @@
         if (mouseDown) {
           ctx.fillStyle = "#FFF"
           ctx.fillRect(0, 0, w, h)
-
+          if (typeof lines === "undefined") lines = []
           lines[lines.length - 1].push({
             x: event.x / xScale,
             y: event.y / yScale
