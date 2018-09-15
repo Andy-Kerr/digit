@@ -18,9 +18,10 @@
   </defs>
   <path d="M 0 0 L 3360 0 L 3360 1952 L 0 1952 Z M 1557.184 1806.176 L 3225.656 1806.176 L 3225.656 137.704 L 1557.184 137.704 Z" style="fill: rgb(150, 213, 255);"/>
   <path d="M 3266.644 179.724 L 3266.644 1848.196 L 1598.172 1848.196 L 1598.172 1806.176 L 3225.656 1806.176 L 3225.656 179.724 Z" style="stroke-width: 5; fill: rgb(94, 160, 204);"/>
-  <text transform="matrix(2, 0, 0, 2, -71.453255, -5.972033)" style="fill: rgb(51, 51, 51); font-family: Nunito; font-size: 77px; font-weight: bold; stroke-width: 0px; white-space: pre;"><tspan x="70.73" y="112.185">Andrew Kerr</tspan><tspan x="70.7300033569336" dy="0.8em">​</tspan><tspan style="font-size: 50.5px;">Neural Network Handwritten </tspan><tspan x="70.7300033569336" dy="0.8em">​</tspan><tspan style="font-size: 50.5px;">MNIST-trained Digit Classifier</tspan></text>
+  <text transform="matrix(2, 0, 0, 2, -71.453255, -5.972033)" style="fill: rgb(51, 51, 51); font-family: Nunito; font-size: 77px; font-weight: bold; stroke-width: 0px; white-space: pre;"><tspan x="70.73" y="112.185">Andrew Kerr</tspan><tspan x="70.7300033569336" dy="0.8em">​</tspan><tspan style="font-size: 40px;">MNIST-trained Neural Network AI</tspan><tspan x="70.7300033569336" dy="0.8em">​</tspan></text>
   <rect x="150.592" y="1601.982" width="1198.364" height="246.214" style="stroke-width: 5; fill: rgb(94, 160, 204);"/>
   <rect x="107.152" y="1559.963" width="1198.364" height="246.214" style="stroke-width: 5; fill: rgb(255, 255, 255); stroke: rgb(51, 51, 51);"/>
   <text style="fill: rgb(51, 51, 51); font-family: Nunito; font-size: 134px; stroke-width: 0px; white-space: pre;" x="313.932" y="1727.32">Clear Canvas</text>
   <rect x="1557.184" y="137.704" width="1668.472" height="1668.472" style="stroke-width: 5; stroke: rgb(51, 51, 51); fill: none;"/>
+  <text style="fill: rgb(51, 51, 51); font-family: Nunito; font-size: 80px; font-weight: bold; stroke-width: 0px; white-space: pre;" x="69.995" y="434.161">for Handwritten Digit Classification</text>
 </svg>
