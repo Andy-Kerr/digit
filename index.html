@@ -169,7 +169,7 @@
       ctx.fillRect(3225, 0, 1600, h)
       ctx.fillRect(0, 0, w, 140)
       ctx.fillRect(0, 1805, w, 1000)
-      var xx = new nnet.Vol()
+      var xx = new nnet.Vol(24, 24, 1)
       var squareData = ctx.getImageData(topLeft.x, topLeft.y, boxWidth, boxWidth);
       var c = document.getElementById("scalingcanvas");
       c.width = Math.sqrt(squareData.data.length/4)
@@ -188,10 +188,6 @@
       for (var i = 0; i < abc.data.length; i += 4) {
         inputLayer.push(255-abc.data[i])
       }
-
-      xx.depth = 1
-      xx.sx = 24
-      xx.sy = 24
       xx.w = inputLayer
       fx = net.forward(xx).w;
       digit = fx.indexOf(Math.max(...fx))
