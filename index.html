@@ -165,7 +165,7 @@
       ctx.fillRect(3225, 0, 1600, h)
       ctx.fillRect(0, 0, w, 140)
       ctx.fillRect(0, 1805, w, 1000)
-      var xx = new nnet.Vol(24, 24, 1)
+      var xx = x();
       var squareData = ctx.getImageData(topLeft.x, topLeft.y, boxWidth, boxWidth);
       var c = document.getElementById("scalingcanvas");
       c.width = Math.sqrt(squareData.data.length/4)
@@ -192,7 +192,7 @@
       xx.w = inputLayer
       weights = xxx[1][0]
       biases = xxx[2][0]
-      fx = net.forward(xx).w;
+      fx = fdx(xx);
       nx = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
       dxx = fx.indexOf(Math.max(...fx))
       for (var n = 0; n < 10; n++) {
