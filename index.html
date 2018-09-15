@@ -203,6 +203,7 @@
       }
       nxx = nx.indexOf(Math.max(...nx))
       digit = nxx == 0 ? 0 : dxx
+      digit = (dxx == 4 && nxx == 1) ? 1 : digit
       ctx.drawImage(document.getElementById("background"), 0, 0, w, h)
       ctx.fillStyle = "#333333"
       ctx.font = '800px Nunito';
