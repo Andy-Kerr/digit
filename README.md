@@ -1,5 +1,5 @@
 # Digit
 Handwritten Digit Classifier
 
-https://andy-kerr.github.io/mnist/
+https://andy-kerr.github.io/digit/
 
