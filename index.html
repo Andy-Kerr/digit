@@ -71,6 +71,7 @@
           y: event.y / yScale
         }])
         if (event.x / xScale < 1400 && event.y / yScale > 1400) {
+          location.reload()
           ctx.fillStyle = "#FFF"
           ctx.fillRect(0, 0, w, h)
           ctx.drawImage(document.getElementById("background"), 0, 0, w, h)
