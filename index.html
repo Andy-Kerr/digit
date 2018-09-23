@@ -42,9 +42,7 @@
       h = 1952
       xScale = window.innerWidth / w
       yScale = window.innerHeight / h
-      if (Math.abs((xScale / yScale) - 1) > 0.1) {
-        xScale = yScale = Math.min(xScale, yScale)
-      }
+      xScale = yScale = Math.min(xScale, yScale)
       var digit
       canvas.width = w * xScale;
       canvas.height = h * yScale;
@@ -63,7 +61,6 @@
       lines = []
       ctx.lineWidth = 60
       ctx.lineJoin = ctx.lineCap = 'round'
-      setInterval(whatNumber, 500)
       window.addEventListener("mousedown", function(event) {
         mouseDown = true
         lines.push([{
@@ -71,7 +68,6 @@
           y: event.y / yScale
         }])
         if (event.x / xScale < 1400 && event.y / yScale > 1400) {
-          location.reload()
           ctx.fillStyle = "#FFF"
           ctx.fillRect(0, 0, w, h)
           ctx.drawImage(document.getElementById("background"), 0, 0, w, h)
@@ -81,6 +77,7 @@
       });
       window.addEventListener("mouseup", function(event) {
         mouseDown = false
+        whatNumber()
       });
       canvas.addEventListener("mousemove", function(event) {
         if (mouseDown) {
@@ -116,7 +113,7 @@
       for (var i = 0; i < imageData.data.length; i += 4) {
         simple.push(imageData.data[i])
       }
-      var grid = []
+      grid = []
       var side = Math.sqrt(simple.length)
       for (var i = 0; i < side; i++) {
         grid.push(simple.slice(side * i, side * (i + 1)))
@@ -137,7 +134,6 @@
           }
         }
       }
-
       for (var i = grid.length - 1; i >= 0; i--) {
         for (var j = grid.length - 1; j >= 0; j--) {
           if (grid[i][j] < 255 && maxY == "red") {
@@ -159,7 +155,6 @@
       }
       topLeft.x += Math.floor(1600 * xScale)
       topLeft.y += Math.floor(150 * yScale)
-      //Get image data again??? easier than looping through
 
       ctx.fillStyle = "#FFF"
       ctx.fillRect(0, 0, 1565, h)
